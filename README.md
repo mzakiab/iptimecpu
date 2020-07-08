@@ -14,5 +14,7 @@ Ini adalah projek menggunakan Raspberry PI dan coding menggunakan Python. Fungsi
 <div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-jspVN26vtpo/XwWgdHcd9-I/AAAAAAAAFTk/SjVQjTyqW9YsaDyFd2UA1ckOx80OizylACLcBGAsYHQ/s1600/IMG_20200708_182557.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://2.bp.blogspot.com/-jspVN26vtpo/XwWgdHcd9-I/AAAAAAAAFTk/SjVQjTyqW9YsaDyFd2UA1ckOx80OizylACLcBGAsYHQ/s320/IMG_20200708_182557.jpg" width="320" height="240" data-original-width="1600" data-original-height="1200" /></a></div>
 
 Selamat mencuba
-de 9W2KEY OJ15dx
+<br>
+de <b>9W2KEY</b> <i>OJ15dx</i>
+<br>
 73
