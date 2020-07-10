@@ -25,17 +25,17 @@ disp = I2C_LCD_driver.lcd() # Initializes LCD Display
 def tempcpu(): #Defines "tempcpu"
    for _ in range(10): # Sets up timer
 
-        cputemp = os.popen("vcgencmd measure_temp").readline() # Gets temp readi
-ng (shows as "temp=xx.x'C")
-        celsius = re.sub("[^0123456789\.]", "", cputemp) # Removes everything bu
-t numbers and "."
-        fahrenheit = int(9.0/5.0*int(float(celsius)+32)) # Math Function Fahrenh
-eit (celsius * 9 / 5 + 32) as interger
+        cputemp = os.popen("vcgencmd measure_temp").readline() 
+         # Gets temp reading (shows as "temp=xx.x'C")
+        celsius = re.sub("[^0123456789\.]", "", cputemp) 
+         # Removes everything but numbers and "."
+        fahrenheit = int(9.0/5.0*int(float(celsius)+32)) 
+         # Math Function Fahrenheit (celsius * 9 / 5 + 32) as interger
 
-        disp.lcd_display_string("Suhu : {} c".format(celsius), 1) # Prints Temp
-as Celsius to the LCD Display line 1
-        disp.lcd_display_string("C P U: {}  f".format(fahrenheit), 2) # Prints T
-emp as Fahrenheit to the LCD Display line 2
+        disp.lcd_display_string("Suhu : {} c".format(celsius), 1) 
+         # Prints Temp as Celsius to the LCD Display line 1
+        disp.lcd_display_string("C P U: {}  f".format(fahrenheit), 2) 
+         # Prints Temp as Fahrenheit to the LCD Display line 2
 
         sleep(1) # Sleeps for one second before restarting loop
 
@@ -58,18 +58,16 @@ def getaddr(ifname): # Defines "getaddr" as well as ifname arguement later
         s.fileno(),
         0x8915,
         struct.pack('256s', ifname[:15])
-    )[20:24]) # Not sure how this block works just yet, but it does dig up the i
-p address
+    )[20:24]) 
+# Not sure how this block works just yet, but it does dig up the ip address
 
-# Sends the IP Address to the lcd display (for 10 seconds) as wlan0, eth0 can al
-so be used
+# Sends the IP Address to the lcd display (for 10 seconds) as wlan0, eth0 can also be used
 def getip(): # Defines "getip"
 
     ip = getaddr('eth0') # Grabs the address from "wlan0" and assigns it to "ip"
     for _ in range(10): # Sets up timer
 
-        disp.lcd_display_string(" IP 9W2KEY FR24 ", 1) # Prints string to LCD Di
-splay line 1
+        disp.lcd_display_string(" IP 9W2KEY FR24 ", 1) # Prints string to LCD Display line 1
         disp.lcd_display_string(ip, 2) # Prints "ip" to LCD Display line 2
 
         sleep(1) # Sleeps for one second before restarting loop
