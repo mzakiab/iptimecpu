@@ -68,7 +68,7 @@ def getip(): # Defines "getip"
     ip = getaddr('eth0') # Grabs the address from "wlan0" and assigns it to "ip"
     for _ in range(10): # Sets up timer
 
-        disp.lcd_display_string("IP Address FR24:", 1) # Prints string to LCD Di
+        disp.lcd_display_string(" IP 9W2KEY FR24 ", 1) # Prints string to LCD Di
 splay line 1
         disp.lcd_display_string(ip, 2) # Prints "ip" to LCD Display line 2
 
